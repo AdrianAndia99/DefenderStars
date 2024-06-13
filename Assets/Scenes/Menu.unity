@@ -554,6 +554,7 @@ GameObject:
   - component: {fileID: 138338111}
   - component: {fileID: 138338110}
   - component: {fileID: 138338109}
+  - component: {fileID: 138338112}
   m_Layer: 5
   m_Name: Salir
   m_TagString: Untagged
@@ -687,6 +688,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138338107}
   m_CullTransparentMesh: 1
+--- !u!114 &138338112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138338107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c0f9a4f701f79428c3683853cc9045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetScale: 1.2
+  duration: 0.2
 --- !u!1 &139314183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,6 +1981,7 @@ GameObject:
   - component: {fileID: 426199744}
   - component: {fileID: 426199743}
   - component: {fileID: 426199742}
+  - component: {fileID: 426199745}
   m_Layer: 5
   m_Name: Opciones
   m_TagString: Untagged
@@ -2087,6 +2103,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426199740}
   m_CullTransparentMesh: 1
+--- !u!114 &426199745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426199740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c0f9a4f701f79428c3683853cc9045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetScale: 1.2
+  duration: 0.2
 --- !u!1 &427071081
 GameObject:
   m_ObjectHideFlags: 0
@@ -3693,6 +3723,7 @@ GameObject:
   - component: {fileID: 1055872621}
   - component: {fileID: 1055872620}
   - component: {fileID: 1055872619}
+  - component: {fileID: 1055872622}
   m_Layer: 5
   m_Name: Creditos
   m_TagString: Untagged
@@ -3814,6 +3845,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055872617}
   m_CullTransparentMesh: 1
+--- !u!114 &1055872622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055872617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c0f9a4f701f79428c3683853cc9045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetScale: 1.2
+  duration: 0.2
 --- !u!1 &1056643311
 GameObject:
   m_ObjectHideFlags: 0
@@ -6121,6 +6166,7 @@ GameObject:
   - component: {fileID: 1595552999}
   - component: {fileID: 1595552998}
   - component: {fileID: 1595552997}
+  - component: {fileID: 1595553000}
   m_Layer: 5
   m_Name: Controles
   m_TagString: Untagged
@@ -6242,6 +6288,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595552995}
   m_CullTransparentMesh: 1
+--- !u!114 &1595553000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595552995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c0f9a4f701f79428c3683853cc9045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetScale: 1.2
+  duration: 0.2
 --- !u!1 &1612136416
 GameObject:
   m_ObjectHideFlags: 0
@@ -8234,6 +8294,7 @@ GameObject:
   - component: {fileID: 1878363443}
   - component: {fileID: 1878363442}
   - component: {fileID: 1878363441}
+  - component: {fileID: 1878363444}
   m_Layer: 5
   m_Name: Jugar
   m_TagString: Untagged
@@ -8367,6 +8428,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878363439}
   m_CullTransparentMesh: 1
+--- !u!114 &1878363444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878363439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c0f9a4f701f79428c3683853cc9045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetScale: 1.2
+  duration: 0.2
 --- !u!1 &1886395974
 GameObject:
   m_ObjectHideFlags: 0
