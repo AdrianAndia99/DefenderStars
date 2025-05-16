@@ -7,11 +7,11 @@ public enum ObstacleType
 }
 public class Obstacle : MonoBehaviour
 {
-    [SerializeField] private float speed; // Velocidad del obstáculo
-    [SerializeField] public int life; // Vida del obstáculo
+    [SerializeField] private float speed; // Velocidad del obstï¿½culo
+    [SerializeField] public int life; // Vida del obstï¿½culo
     public int damage;
     private Rigidbody2D _compRigidBody2D;
-    public bool moveUp; // Dirección del movimiento
+    public bool moveUp; // Direcciï¿½n del movimiento
     public GameObject explosionPrefab;
     public ObstacleType type;
 
@@ -27,7 +27,7 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
         Vector2 direction = moveUp ? new Vector2(1, 1) : new Vector2(1, -1);
-        _compRigidBody2D.velocity = direction * speed;
+        _compRigidBody2D.linearVelocity = direction * speed;
     }
     public void SelectSound()
     {

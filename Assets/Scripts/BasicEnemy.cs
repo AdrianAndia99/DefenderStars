@@ -28,7 +28,7 @@ public class BasicEnemy : MonoBehaviour
 
     void Update()
     {
-        _compRigidbody2D.velocity = direction * speed;
+        _compRigidbody2D.linearVelocity = direction * speed;
     }
 
     IEnumerator FireProjectile()
@@ -38,7 +38,7 @@ public class BasicEnemy : MonoBehaviour
             if (playerTransform != null)
             {
                 GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-                projectile.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
+                projectile.GetComponent<Rigidbody2D>().linearVelocity = direction * projectileSpeed;
             }
             yield return new WaitForSeconds(1 / firingRate);
         }

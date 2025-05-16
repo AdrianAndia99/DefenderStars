@@ -19,7 +19,7 @@ public class KamikazeEnemy : MonoBehaviour
         if (playerTransform != null)
         {
             Vector2 direction = (playerTransform.position - transform.position).normalized;
-            _compRigidBody2D.velocity = direction * speed;
+            _compRigidBody2D.linearVelocity = direction * speed;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

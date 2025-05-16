@@ -17,7 +17,7 @@ public class PerforatorBullet : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        _compRigidBody2D.velocity = new Vector2(speed, 0);
+        _compRigidBody2D.linearVelocity = new Vector2(speed, 0);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

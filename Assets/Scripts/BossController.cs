@@ -7,19 +7,19 @@ public class BossController : MonoBehaviour
     [SerializeField] private int bulletCount;
     [SerializeField] private float cooldownTime;
     [SerializeField] public int life;
-    [SerializeField] private float limit; // Límite para el movimiento vertical
+    [SerializeField] private float limit; // Lï¿½mite para el movimiento vertical
     [SerializeField] private float speed; // Velocidad de movimiento vertical
     [SerializeField] private int damage; // Velocidad de movimiento vertical
     public GameObject explosionPrefab;
     public GameObject powerUp;
     private float nextFireTime = 0;
     private Rigidbody2D rb;
-    private int direction = 1; // Dirección inicial hacia arriba
+    private int direction = 1; // Direcciï¿½n inicial hacia arriba
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0, speed); // Comienza a moverse hacia arriba
+        rb.linearVelocity = new Vector2(0, speed); // Comienza a moverse hacia arriba
     }
 
     void Update()
@@ -30,7 +30,7 @@ public class BossController : MonoBehaviour
             nextFireTime = Time.time + cooldownTime;
         }
 
-        // Cambia de dirección si alcanza los límites
+        // Cambia de direcciï¿½n si alcanza los lï¿½mites
         if (transform.position.y >= limit)
         {
             direction = -1; // Mover hacia abajo
@@ -40,12 +40,12 @@ public class BossController : MonoBehaviour
             direction = 1; // Mover hacia arriba
         }
 
-        rb.velocity = new Vector2(0, speed * direction);
+        rb.linearVelocity = new Vector2(0, speed * direction);
     }
 
     private void FireBullets()
     {
-        float angleStep = 180f / (bulletCount - 1); // Ajustar el ángulo para un patrón de semicírculo
+        float angleStep = 180f / (bulletCount - 1); // Ajustar el ï¿½ngulo para un patrï¿½n de semicï¿½rculo
         float angle = 0f;
 
         for (int i = 0; i < bulletCount; i++)
@@ -57,7 +57,7 @@ public class BossController : MonoBehaviour
             Vector2 projectileMoveDirection = (projectileVector - (Vector2)transform.position).normalized * bulletSpeed;
 
             GameObject tmpObj = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-            tmpObj.GetComponent<Rigidbody2D>().velocity = new Vector2(projectileMoveDirection.x, projectileMoveDirection.y);
+            tmpObj.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(projectileMoveDirection.x, projectileMoveDirection.y);
 
             angle += angleStep;
         }

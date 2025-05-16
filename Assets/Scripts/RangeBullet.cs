@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class RangeBullet : MonoBehaviour
 {
-    public float waitTime = 2f; // Tiempo que el proyectil permanecerá quieto
-    public float scaleIncrease = 2f; // Cantidad que se escalará el proyectil
-    public int damage = 10; // Daño que se aplicará a los enemigos
+    public float waitTime = 2f; // Tiempo que el proyectil permanecerï¿½ quieto
+    public float scaleIncrease = 2f; // Cantidad que se escalarï¿½ el proyectil
+    public int damage = 10; // Daï¿½o que se aplicarï¿½ a los enemigos
     public float speed = 10f;
-    public float damageInterval = 1f; // Intervalo de tiempo entre cada aplicación de daño
+    public float damageInterval = 1f; // Intervalo de tiempo entre cada aplicaciï¿½n de daï¿½o
     private Rigidbody2D _compRigidbody2D;
-    private bool isStationary = false; // Bandera para controlar si el proyectil está quieto
-    private float lastDamageTime; // Última vez que se aplicó daño
+    private bool isStationary = false; // Bandera para controlar si el proyectil estï¿½ quieto
+    private float lastDamageTime; // ï¿½ltima vez que se aplicï¿½ daï¿½o
     public GameObject powerUp;
     public GameObject explosionPrefab;
     private void Awake()
@@ -27,11 +27,11 @@ public class RangeBullet : MonoBehaviour
     {
         if (!isStationary)
         {
-            _compRigidbody2D.velocity = new Vector2(speed, 0);
+            _compRigidbody2D.linearVelocity = new Vector2(speed, 0);
         }
         else
         {
-            _compRigidbody2D.velocity = Vector2.zero;
+            _compRigidbody2D.linearVelocity = Vector2.zero;
         }
     }
 
@@ -77,7 +77,7 @@ public class RangeBullet : MonoBehaviour
         {
             if (other.tag == "BasicEnemy")
             {
-                // Aplica daño al enemigo
+                // Aplica daï¿½o al enemigo
                 BasicEnemy enemy = other.gameObject.GetComponent<BasicEnemy>();
                 if (enemy != null)
                 {
@@ -100,7 +100,7 @@ public class RangeBullet : MonoBehaviour
             }
             else if (other.tag == "KamikazeEnemy")
             {
-                // Aplica daño al enemigo
+                // Aplica daï¿½o al enemigo
                 KamikazeEnemy enemy = other.gameObject.GetComponent<KamikazeEnemy>();
                 if (enemy != null)
                 {
@@ -140,7 +140,7 @@ public class RangeBullet : MonoBehaviour
             }
             else if (other.tag == "Boss")
             {
-                // Aplica daño al enemigo
+                // Aplica daï¿½o al enemigo
                 BossController enemy = other.gameObject.GetComponent<BossController>();
                 if (enemy != null)
                 {
@@ -165,7 +165,7 @@ public class RangeBullet : MonoBehaviour
     {
         isStationary = true;
 
-        // Guarda la posición original del proyectil
+        // Guarda la posiciï¿½n original del proyectil
         Vector3 originalPosition = transform.position;
 
         // Escala el proyectil

@@ -15,7 +15,7 @@ public class MysteryBox : MonoBehaviour
     void Start()
     {
         // La caja se mueve en el eje x negativo al instanciarse
-        _compRigidbody2D.velocity = new Vector2(-speed, 0);
+        _compRigidbody2D.linearVelocity = new Vector2(-speed, 0);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,7 +26,7 @@ public class MysteryBox : MonoBehaviour
             // Seleccionamos un power up basado en las probabilidades
             int randomIndex = GetRandomPowerUpIndex();
 
-            // Si el índice es igual a la longitud del arreglo, entonces el power up es el de aumentar vida
+            // Si el ï¿½ndice es igual a la longitud del arreglo, entonces el power up es el de aumentar vida
             if (randomIndex == powerUps.Length)
             {
                 // Aumentamos la vida del jugador en un rango de 1 a 3 vidas
@@ -77,6 +77,6 @@ public class MysteryBox : MonoBehaviour
                 randomPoint -= powerUpProbabilities[i];
             }
         }
-        return powerUpProbabilities.Length; // Devuelve el índice para aumentar vida
+        return powerUpProbabilities.Length; // Devuelve el ï¿½ndice para aumentar vida
     }
 }
